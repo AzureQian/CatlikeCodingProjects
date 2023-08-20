@@ -41,14 +41,22 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Building a Graph\Graph.cs" />
      <Compile Include="Assets\Scripts\Game Objects and Scripts\Clock.cs" />
      <Folder Include="Assets" />
+     <Folder Include="Assets\Resources\Building a Graph\Prefabs" />
      <Folder Include="Assets\Scenes" />
      <Folder Include="Assets\Resources" />
+     <Folder Include="Assets\Resources\Building a Graph\URP" />
+     <Folder Include="Assets\Resources\Building a Graph\Shaders" />
      <Folder Include="Assets\Scripts" />
+     <None Include="Assets\Resources\Building a Graph\Shaders\PointSurface.shader" />
+     <Folder Include="Assets\Resources\Building a Graph" />
      <Folder Include="Assets\Resources\Game Objects and Scripts\Materials" />
      <Folder Include="Assets\Scripts\Game Objects and Scripts" />
+     <Folder Include="Assets\Resources\Building a Graph\Materials" />
      <Folder Include="Assets\Resources\Game Objects and Scripts" />
+     <Folder Include="Assets\Scripts\Building a Graph" />
      <Reference Include="UnityEngine">
      <HintPath>E:\DevTools\Unity\Unity 2021.3.21f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
@@ -297,6 +305,18 @@
      </Reference>
      <Reference Include="UnityEditor.UnityConnectModule">
      <HintPath>E:\DevTools\Unity\Unity 2021.3.21f1c1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Burst.Cecil.Mdb">
+     <HintPath>E:\CodingProjects\Unity\Catlike Coding Projects\CatlikeCodingProjects\Basic\Library\PackageCache\com.unity.burst@1.8.2\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Burst.Cecil.Pdb">
+     <HintPath>E:\CodingProjects\Unity\Catlike Coding Projects\CatlikeCodingProjects\Basic\Library\PackageCache\com.unity.burst@1.8.2\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Burst.Cecil">
+     <HintPath>E:\CodingProjects\Unity\Catlike Coding Projects\CatlikeCodingProjects\Basic\Library\PackageCache\com.unity.burst@1.8.2\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Burst.Cecil.Rocks">
+     <HintPath>E:\CodingProjects\Unity\Catlike Coding Projects\CatlikeCodingProjects\Basic\Library\PackageCache\com.unity.burst@1.8.2\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
      </Reference>
      <Reference Include="netstandard">
      <HintPath>E:\DevTools\Unity\Unity 2021.3.21f1c1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
@@ -664,14 +684,65 @@
      <Reference Include="System.Xml.Serialization">
      <HintPath>E:\DevTools\Unity\Unity 2021.3.21f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.ShaderGraph.Editor">
+     <HintPath>E:\CodingProjects\Unity\Catlike Coding Projects\CatlikeCodingProjects\Basic\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.VSCode.Editor">
      <HintPath>E:\CodingProjects\Unity\Catlike Coding Projects\CatlikeCodingProjects\Basic\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Burst">
+     <HintPath>E:\CodingProjects\Unity\Catlike Coding Projects\CatlikeCodingProjects\Basic\Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Universal.Shaders">
+     <HintPath>E:\CodingProjects\Unity\Catlike Coding Projects\CatlikeCodingProjects\Basic\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Universal.Editor">
+     <HintPath>E:\CodingProjects\Unity\Catlike Coding Projects\CatlikeCodingProjects\Basic\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Universal.Runtime">
+     <HintPath>E:\CodingProjects\Unity\Catlike Coding Projects\CatlikeCodingProjects\Basic\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="PPv2URPConverters">
+     <HintPath>E:\CodingProjects\Unity\Catlike Coding Projects\CatlikeCodingProjects\Basic\Library\ScriptAssemblies\PPv2URPConverters.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualStudio.Editor">
      <HintPath>E:\CodingProjects\Unity\Catlike Coding Projects\CatlikeCodingProjects\Basic\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+     <HintPath>E:\CodingProjects\Unity\Catlike Coding Projects\CatlikeCodingProjects\Basic\Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
+     <HintPath>E:\CodingProjects\Unity\Catlike Coding Projects\CatlikeCodingProjects\Basic\Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Burst.Editor">
+     <HintPath>E:\CodingProjects\Unity\Catlike Coding Projects\CatlikeCodingProjects\Basic\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Mathematics.Editor">
+     <HintPath>E:\CodingProjects\Unity\Catlike Coding Projects\CatlikeCodingProjects\Basic\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Searcher.Editor">
+     <HintPath>E:\CodingProjects\Unity\Catlike Coding Projects\CatlikeCodingProjects\Basic\Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Core.Runtime">
+     <HintPath>E:\CodingProjects\Unity\Catlike Coding Projects\CatlikeCodingProjects\Basic\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.UI">
+     <HintPath>E:\CodingProjects\Unity\Catlike Coding Projects\CatlikeCodingProjects\Basic\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Rider.Editor">
      <HintPath>E:\CodingProjects\Unity\Catlike Coding Projects\CatlikeCodingProjects\Basic\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+     <HintPath>E:\CodingProjects\Unity\Catlike Coding Projects\CatlikeCodingProjects\Basic\Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.UI">
+     <HintPath>E:\CodingProjects\Unity\Catlike Coding Projects\CatlikeCodingProjects\Basic\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Core.Editor">
+     <HintPath>E:\CodingProjects\Unity\Catlike Coding Projects\CatlikeCodingProjects\Basic\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Mathematics">
+     <HintPath>E:\CodingProjects\Unity\Catlike Coding Projects\CatlikeCodingProjects\Basic\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>
