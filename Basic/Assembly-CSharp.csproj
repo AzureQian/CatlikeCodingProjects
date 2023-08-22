@@ -42,7 +42,9 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Building a Graph\Graph.cs" />
+     <Compile Include="Assets\Scripts\Mathematical Surfaces\FunctionLibrary.cs" />
      <Compile Include="Assets\Scripts\Game Objects and Scripts\Clock.cs" />
+     <Compile Include="Assets\Scripts\Mathematical Surfaces\Graph.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Resources\Building a Graph\Prefabs" />
      <Folder Include="Assets\Scenes" />
@@ -53,7 +55,9 @@
      <None Include="Assets\Resources\Building a Graph\Shaders\PointSurface.shader" />
      <Folder Include="Assets\Resources\Building a Graph" />
      <Folder Include="Assets\Resources\Game Objects and Scripts\Materials" />
+     <Folder Include="Assets\Scripts\Mathematical Surfaces" />
      <Folder Include="Assets\Scripts\Game Objects and Scripts" />
+     <Folder Include="Assets\Resources\Mathematical Surfaces" />
      <Folder Include="Assets\Resources\Building a Graph\Materials" />
      <Folder Include="Assets\Resources\Game Objects and Scripts" />
      <Folder Include="Assets\Scripts\Building a Graph" />
